@@ -1,8 +1,10 @@
-const express = require('express');
+const app = require('./app');
 const port = 3000;
-const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json()); 
+
+
+
 const userController = require('./controllers/userController')
 app.use('/user',userController);
 
